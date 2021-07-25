@@ -1,0 +1,448 @@
+/*--------------- general rules ---------------*/
+
+body {
+    background-color: #d9d3cc;
+    padding-right: 15px;
+    padding-left: 15px;
+    overflow-x: hidden;
+}
+main {
+    background-image: url("images/ellipse_bg.svg");
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: top center;
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+}
+
+.internal-main {
+    background-image: none;
+    padding-bottom: 10px;
+}
+
+.p-internal-main {
+    background-image: none;
+    padding-bottom: 10px;
+}
+
+p, a, figcaption {
+    font-family: orpheuspro,serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+}
+
+/*--------------- main header ---------------*/
+
+#name-title h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+}
+
+#name-title a h2 {
+    margin-top: 0;
+    font-family: orpheuspro,serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid 1px black;
+    margin: 0;
+}
+
+header a {
+    font-family: orpheuspro,serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+#name-title {
+    padding-top: 10px;
+}
+
+#head-ast {
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    padding-top: 15px;
+    padding-left: 30px;
+}
+
+#desktop_menu {
+    display: none;
+}
+
+/*--------------- mobile nav / sidebar ---------------*/
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding-left: none;
+}
+
+nav ul li {
+    height: 75px;
+    width: 75px;
+    padding-top: 25px;
+}
+
+.submenu {
+    padding-right: 30px;
+    list-style: none;
+}
+
+#mobilenav ul li ul{
+    position: absolute;
+    left: -9999px;
+    margin-left: -50px;
+}
+
+#mobilenav ul li ul li{
+    padding-left: 15px;
+    display: block;
+    background-color: #d9d3cc;
+}
+
+#mobilenav ul li:hover ul {
+    left: auto;
+}
+
+/*--------------- page headers and nav --------------- */
+
+#home-links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 70px;
+}
+
+.internal-header {
+    font-size: 70px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+a:hover {
+    color: #a39e99;
+}
+
+a > figcaption:hover {
+    color: #a39e99;
+}
+
+a > img:hover {
+    opacity: 65%;
+}
+
+.body_header {
+    font-size: 70px;
+}
+
+.body_header span {
+    background-color: #d9d3cc;
+}
+
+#main-photo-link {
+    text-align: left;
+}
+
+#main-des-link {
+    text-align: right;
+    margin-top: 0;
+    padding-bottom: 80px;
+}
+
+#main-des-link a {
+    background-color: #d9d3cc;
+}
+
+#main-photo-link a {
+    background-color: #d9d3cc;
+}
+
+.body-ast {
+    height: 50px;
+    width: 50px;
+    vertical-align: center;
+    margin-right: 50%;
+    margin-left: 50%;
+    margin-bottom: 60px;
+}
+
+/*--------------- internal posts ---------------*/
+
+.int_preview {
+    text-align: center;
+    font-size: 35px;
+}
+
+#internal_post {
+    text-align: center;
+}
+
+#internal_post > img {
+    padding-top: 20px;
+    width: 100%;
+}
+
+
+
+.int_content_header {
+    font-family: orpheuspro,serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.int_content {
+    padding-left: 10px;
+}
+
+#about_me > img {
+    width: 100%;
+}
+
+
+/*--------------- footer ---------------*/
+
+footer {
+    padding-top: 50px;
+}
+
+footer p {
+    text-align: center;
+}
+
+/*--------------- media queries ---------------*/
+@media only screen and (min-width: 650px) {
+
+    main {
+        background-image: url("images/ellipse_bg.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top center;
+        margin-top: 20px;
+        padding-bottom: 25%;
+        width: 100%;
+        height: 100%;
+    }
+
+    #home-links {
+        padding-top: 50px;
+        padding-left: 17%;
+        padding-right: 50px;
+    }
+
+
+}
+
+@media only screen and (min-width: 750px) {
+    
+    .p-internal-main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .internal-header {
+        width: 100%;
+        text-align: left;
+    }
+
+    #index_internal_header {
+        text-align: center;
+    }
+
+    #internal_post {
+        width: 50%;
+    }
+
+    #challenge_why {
+        max-width: 400px;
+        z-index: -1;
+        padding-top: 20px;
+        padding-bottom: 50%;
+        padding-right: 40px;
+        padding-left: 20px;
+        display: block;
+        position: fixed;
+        top: 35%;
+        left: 55%;
+        right: 30px;
+        background-image: url("images/ellipse_bg.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-origin: padding-box;
+    }
+
+    #challenge_why .int_content {
+        background-color: #d9d3cc;
+    }
+
+    #special_challenge_why {
+        font-size: 10px;
+        max-width: 500px;
+        z-index: -1;
+        padding-top: 20px;
+        padding-bottom: 60%;
+        padding-right: 40px;
+        padding-left: 20px;
+        display: block;
+        position: fixed;
+        top: 20%;
+        left: 55%;
+        right: 30px;
+        background-image: url("images/ellipse_bg.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-origin: padding-box;
+    }
+
+    #special_challenge_why .int_content {
+        background-color: #d9d3cc;
+    }
+
+    .internal-main {
+        background-image: url("images/ellipse_bg.svg");
+        background-repeat: no-repeat;
+        background-size: 85%;
+        background-position: top center;
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    #home-links {
+        font-size: 100px;
+        padding-left: 5%;
+    }
+
+    #photo-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    #des-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    .int_preview a img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .internal-header {
+        font-size: 90px;
+        background-color: #d9d3cc;
+    }
+
+    figcaption {
+        background-color: #d9d3cc;
+    }
+
+    .body-ast {
+        width: 75px;
+        height: 75px;
+    }
+
+    #about_me {
+        display: flex;
+        justify-content: space-between;
+        max-width: 90%;
+    }
+
+    #about_me > img {
+        max-width: 400px;
+        width: 35%;
+    }
+
+    #about_me_content {
+        width: 60%;
+    }
+
+    #about_me {
+        line-height: 25px;
+    }
+}
+
+@media only screen and (min-width: 925px) {
+    #special_challenge_why {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 950px) {
+    #about_me {
+        line-height: 45px;
+    }
+}
+
+@media only screen and (min-width: 1020px) {
+    
+    .body-ast {
+        height: 100px;
+        width: 100px;
+    }
+
+    #head_ast {
+        flex: 1;
+    }
+    #mobilenav {
+        display: none;
+    }
+
+    #desktopnav {
+        width: 40%;
+        justify-content: space-between;
+    }
+    #desktop_menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #special_challenge_why {
+        font-size: 15px;
+    }
+    main {
+        background-image: url("images/ellipse_bg.svg");
+        background-repeat: no-repeat;
+        background-size: 85%;
+        background-position: top center;
+        margin-top: 20px;
+        padding-bottom: 25%;
+        width: 100%;
+        height: auto;
+    }
+
+    #home-links {
+        font-size: 115px;
+    }
+
+    #internal_post {
+        text-align: left;
+    }
+
+    #internal_post > img {
+        padding-top: 20px;
+        width: 90%;
+    }
+
+    #about_me_content {
+        width: 60%;
+        width: 50%;
+        vertical-align: middle;
+    }
+}
+@media only screen and (min-width: 1050px) {
+    #challenge_why {
+        top: 25%;
+    }
+}
